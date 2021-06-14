@@ -289,7 +289,7 @@ class DiscordComponents:
                 else:
                     if component.id == data["component"]["custom_id"]:
                         rescomponent = component
-        else:
+        if not rescomponent:
             rescomponent = data["component"]
 
         ctx = Interaction(
